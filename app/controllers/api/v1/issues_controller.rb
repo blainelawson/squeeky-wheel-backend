@@ -1,7 +1,13 @@
 class Api::V1::IssuesController < ApplicationController
     def index
-        @issues = Issue.all
-        render json: @issues
+        if !params[:user_id]
+            @issues = Issue.all
+            render json: @issues
+        else
+            # binding.pry
+            @issues = User.find_by(id: params[:user_id]).issues
+            render json: @issues
+        end
     end
 
     def show

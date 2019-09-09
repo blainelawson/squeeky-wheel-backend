@@ -10,7 +10,7 @@ require 'pry'
 
 10.times do |i|
     Issue.create(name: Faker::GreekPhilosophers.name, desc: Faker::GreekPhilosophers.quote, date: Faker::Date.backward(days: 365))
-    User.create(name: Faker::Name.name, zipcode: Faker::Address.zip)
+    User.create(name: Faker::Name.name, zipcode: Faker::Address.zip, password_digest: "password")
 end
 
 10.times do |i|
@@ -18,6 +18,6 @@ end
     rand(0..10).times do |i2|
         user.issues << Issue.all[rand(0..9)]
     end
-    user.issues.uniq
+    user.issues = user.issues.uniq
     user.save
 end
