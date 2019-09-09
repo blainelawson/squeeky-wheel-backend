@@ -1,0 +1,19 @@
+Classes needed:
+
+User
+Issue
+
+
+
+User
+    Name
+    Zip Code
+    has_many issues
+
+
+Issue
+    Name
+    Desc
+    has_many users
+
+
