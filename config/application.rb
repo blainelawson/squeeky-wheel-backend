@@ -18,9 +18,18 @@ module SqueekyWheelBackend
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins '*'
-        resource '*', headers: :any, methods: [:get, :post, :options]
+        origins 'http://localhost:8000'
+
+        resource '*', 
+        headers: :any, 
+        methods: [:get, :post, :options, :put, :patch, :delete, :head],
+        credentials: true
+        
       end
     end
+
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore, key:
+    '_cookie_name'
   end
 end
