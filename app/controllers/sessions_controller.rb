@@ -17,6 +17,7 @@ class SessionsController < ApplicationController
 
     def get_current_user
         if logged_in?
+            @user = current_user
             render json: @user
         else
             render json: {
