@@ -6,7 +6,6 @@ class Api::V1::IssuesController < ApplicationController
         else
 
             @issues = User.find_by(id: params[:user_id]).issues
-            byebug
             render json: @issues
         end
     end
