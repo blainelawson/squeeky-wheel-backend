@@ -12,12 +12,11 @@ class SessionsController < ApplicationController
                 error: "Invalid Credentials"
             }
         end
-
     end
 
     def get_current_user
         if logged_in?
-            @user = current_user
+            @user = my_current_user
             render json: @user
         else
             render json: {

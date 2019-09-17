@@ -1,13 +1,13 @@
 class ApplicationController < ActionController::Base
     include ::ActionController::Cookies
 
-    protect_from_forgery with: :exception    
+    protect_from_forgery prepend: true
     
-        def current_user
+        def my_current_user
             User.find_by(id: session[:user_id])
         end
 
         def logged_in?
-            !!current_user
+            !!my_current_user
         end
 end

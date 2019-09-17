@@ -4,7 +4,6 @@ class Api::V1::IssuesController < ApplicationController
             @issues = Issue.all
             render json: @issues
         else
-
             @issues = User.find_by(id: params[:user_id]).issues
             render json: @issues
         end
