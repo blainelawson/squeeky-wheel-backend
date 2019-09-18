@@ -10,7 +10,7 @@ require 'pry'
 
 10.times do |i|
     Issue.create(name: Faker::GreekPhilosophers.name, desc: Faker::GreekPhilosophers.quote, date: Faker::Date.backward(days: 365))
-    User.create(name: Faker::Name.name, zipcode: Faker::Address.zip, password: "password")
+    User.create(name: Faker::Name.name, zipcode: Faker::Address.zip, password: "password", username: "blainelawson#{i}")
 end
 
 10.times do |i|

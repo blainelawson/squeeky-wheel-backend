@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
     def add_issue
-        byebug
         @issue = Issue.find_by(id: params[:issueId])
-
-        if @issue
-            # byebug
+        # byebug
+        if @issue && !my_current_user.issues.include?(@issue)
             my_current_user.issues << @issue
+            # byebug
+            my_current_user.save
             render json: @issue
         else 
             render json: {

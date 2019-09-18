@@ -1,7 +1,5 @@
-class ApplicationController < ActionController::Base
+class ApplicationController < ActionController::API
     include ::ActionController::Cookies
-
-    protect_from_forgery prepend: true
     
         def my_current_user
             User.find_by(id: session[:user_id])
