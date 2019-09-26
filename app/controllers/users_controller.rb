@@ -1,6 +1,5 @@
 class Api::V1::UsersController < ApplicationController
     def add_issue
-        byebug
         @issue = Issue.find_by(id: params[:issueId])
         
         if @issue && !my_current_user.issues.include?(@issue)

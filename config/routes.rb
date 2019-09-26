@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :issues
       resources :users do
+        get "/not_user_issues", :to => "issues#not_user_issues"
         patch "/add_user_issue", :to => "users#add_issue"
         patch "/delete_user_issue", :to => "users#delete_user_issue"
         resources :issues
