@@ -1,24 +1,13 @@
-# README
+**IN PRODUCTION**
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Current Walkthrough: https://www.loom.com/share/fddd82cf688e47c88edad8303190d796
 
-Things you may want to cover:
+"'The squeaky wheel gets the grease' is an American proverb used to convey the idea that the most noticeable problems are the ones most likely to get attention." - Wikipedia
 
-* Ruby version
+Squeeky Wheel intends to create a community around the issues people face, both of a broad appeal, such as climate change, and more local, like finding affordable housing or having access to public transportation. Often, the people who make the most noise, make the most calls to their legislative offices, send the most e-mails--those of issues about which we are the loudest--are the ones that get the attention. Thus, squeeky wheel seeks to unite people by their concerns, connect them with summary information involving their concerns from the news, and prompt them to take action.
 
-* System dependencies
+Using user address data, Squeeky Wheel will prioritize news closer to one's home as well as connecting to government API feeds to assess details like voting precint and district info so users can quickly tap a button to be patched directly to their senators, House reps, etc.
 
-* Configuration
+// BACK END //
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is the server-side portion of the website which utilizes Ruby on Rails. It connects with the front-end as its API resource at http://www.github.com/blainelawson/squeeky-wheel-frontend which utilizes React-Redux.
