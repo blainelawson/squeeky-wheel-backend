@@ -19,7 +19,7 @@ module SqueekyWheelBackend
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'https://squeeky-wheel-frontend.heroku-app.com'
+        origins 'https://squeeky-wheel-frontend.herokuapp.com'
 
         resource '*', 
         headers: :any, 
